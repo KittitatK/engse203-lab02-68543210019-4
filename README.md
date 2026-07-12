@@ -54,7 +54,7 @@ nvm use 2
 ###  เข้าไปที่ ENGSE203/engse203-lab02-68543210007-9
 ```bas
 # 1. Clone repository
-git clone https://github.com/BELLprime/engse203-lab02-68543210019-4.git
+git clone https://github.com/KittitatK/engse203-lab02-68543210019-4.git
 cd engse203-lab02-<student-id>
 
 # 2. ติดตั้ง npm
