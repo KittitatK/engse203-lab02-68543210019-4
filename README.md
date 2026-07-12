@@ -51,7 +51,7 @@ nvm install 22
 nvm alias default 22
 nvm use 2
 ```
-###  เข้าไปที่ ENGSE203/engse203-lab02-68543210007-9
+###  เข้าไปที่ ENGSE203/engse203-lab02-68543210019-4
 ```bas
 # 1. Clone repository
 git clone https://github.com/KittitatK/engse203-lab02-68543210019-4.git
