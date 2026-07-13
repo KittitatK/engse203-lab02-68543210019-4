@@ -1,44 +1,68 @@
-# ENGSE203 LAB 02 — Modern JavaScript Dashboard
+# 🚀 ENGSE203 LAB 02 — Modern JavaScript Dashboard
 
-## ผู้จัดทำ
+<p align="center">
 
-- ชื่อ-นามสกุล : นาย กิตติทัต กันธรรม
-- รหัสนักศึกษา : 68543210019-4
-- ระบบปฏิบัติการที่ใช้ : macOS
-- Repository : engse203-lab02-68543210019-4
+![JavaScript](https://img.shields.io/badge/JavaScript-ES6+-yellow?logo=javascript)
+![Vite](https://img.shields.io/badge/Vite-7.x-646CFF?logo=vite)
+![Node.js](https://img.shields.io/badge/Node.js-v22-green?logo=node.js)
+![GitHub Pages](https://img.shields.io/badge/Deploy-GitHub%20Pages-blue?logo=github)
 
----
-
-## วัตถุประสงค์ของงาน
-
-โปรเจกต์นี้เป็นส่วนหนึ่งของ Lab 02 ในรายวิชา ENGSE203 (Modern JavaScript) โดยเป็นการพัฒนา
-**Dashboard** ด้วย JavaScript สมัยใหม่ (Modern JavaScript / ES Modules) ที่แบ่งการทำงานออกเป็น
-โมดูลย่อยอย่างน้อย 4 โมดูล เพื่อฝึกการออกแบบโครงสร้างโค้ดที่เป็นระเบียบ นำกลับมาใช้ซ้ำได้
-(reusable) และดูแลรักษาง่าย (maintainable)
-
-Dashboard นี้แสดงผลข้อมูลในรูปแบบ UI ที่รองรับทั้ง **สถานะปกติ (Normal State)** และ
-**สถานะเมื่อเกิดข้อผิดพลาด (Error State)** พร้อมทั้งมีการตรวจสอบชนิดข้อมูล/คุณภาพโค้ดด้วย
-เครื่องมือที่กำหนด และ deploy ขึ้น GitHub Pages เพื่อให้เข้าถึงได้จริงผ่านเบราว์เซอร์
-
-### โครงสร้างโมดูล (Modules)
-
-| NO. | Module | หน้าที่ความรับผิดชอบ |
-|---|--------|----------------------|
-| 1 | `api.js` | ดึงข้อมูล (data fetching) จาก `data/learning-tasks.json` ผ่าน `fetchLearningTasks()` รองรับการจำลอง error (`simulateError`) ตรวจสอบ HTTP status และรูปแบบข้อมูลที่ได้รับ (validation) |
-| 2 | `main.js` | Entry point ของแอป จัดการ state, event listeners (search/filter), เรียกใช้ฟังก์ชันจากโมดูลอื่นเพื่อโหลดและ render ข้อมูล รวมถึงจัดการ try/catch สำหรับ error handling |
-| 3 | `ui.js` | รับผิดชอบการ render UI ทั้งหมด เช่น `renderStats()`, `renderTasks()`, `setMessage()` และป้องกัน XSS ด้วย `escapeHtml()` |
-| 4 | `utils.js` | ฟังก์ชันช่วยเหลือ (utilities) สำหรับกรองข้อมูล (`filterTasks`), คำนวณสถิติ (`getStats`) และแปลง label สถานะ (`getStatusLabel`) |
+</p>
 
 ---
 
-## วิธีติดตั้งและรันโปรเจกต์
+# 👨‍💻 Student Information
 
-### ข้อกำหนดเบื้องต้น (Prerequisites)
+| รายการ | รายละเอียด |
+|---------|------------|
+| **ชื่อ-นามสกุล** | นาย กิตติทัต กันธรรม |
+| **รหัสนักศึกษา** | 68543210019-4 |
+| **Operating System** | macOS |
+| **Repository** | `engse203-lab02-68543210019-4` |
 
-- node -v
-- npm -v
+---
 
-### ขั้นตอนกรทำ
+# 📖 Project Overview
+
+โปรเจกต์นี้เป็นส่วนหนึ่งของ **ENGSE203 - Modern JavaScript (Lab 02)**
+
+พัฒนา Dashboard ด้วย **Modern JavaScript (ES Modules)** โดยแบ่งการทำงานออกเป็นหลายโมดูล เพื่อฝึก
+
+- Modular Programming
+- Reusable Code
+- Maintainable Code
+- Error Handling
+- Fetch API
+- GitHub Pages Deployment
+
+Dashboard รองรับทั้ง
+
+- ✅ Normal State
+- ❌ Error State
+
+---
+
+# 🧩 Project Modules
+
+| Module | Responsibility |
+|---------|---------------|
+| `api.js` | ดึงข้อมูลจาก `learning-tasks.json`, ตรวจสอบ HTTP Status, Validation และจำลอง Error |
+| `main.js` | Entry Point, จัดการ State, Event Listener และ Error Handling |
+| `ui.js` | Render UI ทั้งหมด พร้อมป้องกัน XSS ด้วย `escapeHtml()` |
+| `utils.js` | Utility Functions เช่น Filter, Statistics และ Status Label |
+
+---
+
+# ⚙️ Installation
+
+## Prerequisites
+
+```bash
+node -v
+npm -v
+```
+
+ติดตั้ง Node.js ผ่าน NVM
 
 ```bash
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.5/install.sh | bash
@@ -49,37 +73,42 @@ command -v nvm
 
 nvm install 22
 nvm alias default 22
-nvm use 2
+nvm use 22
 ```
-###  เข้าไปที่ ENGSE203/engse203-lab02-68543210019-4
-```bas
-# 1. Clone repository
-git clone https://github.com/KittitatK/engse203-lab02-68543210019-4.git
-cd engse203-lab02-<student-id>
 
-# 2. ติดตั้ง npm
-npm init -y
+Clone Project
+
+```bash
+git clone https://github.com/KittitatK/engse203-lab02-68543210019-4.git
+
+cd engse203-lab02-68543210019-4
+
 npm install
 ```
 
-## โครงสร้างไฟล์
+---
+
+# 📂 Project Structure
 
 ```text
-.
 engse203-lab02-<student-id>/
+│
 ├── public/
 │   ├── .nojekyll
 │   └── data/
 │       └── learning-tasks.json
+│
 ├── scripts/
 │   └── check-project.mjs
+│
 ├── src/
 │   ├── api.js
 │   ├── main.js
 │   ├── style.css
 │   ├── ui.js
 │   └── utils.js
-├── docs/               # สร้างจาก npm run build และต้อง commit
+│
+├── docs/
 ├── .gitignore
 ├── index.html
 ├── package.json
@@ -87,66 +116,91 @@ engse203-lab02-<student-id>/
 └── vite.config.js
 ```
 
+---
 
-### คำสั่งที่ใช้งานได้
+# ▶️ Available Scripts
 
-| คำสั่ง | คำอธิบาย |
-|--------|----------|
-| `npm install` | ติดตั้ง dependencies ทั้งหมดของโปรเจกต์ |
-| `npm run dev` | รันเซิร์ฟเวอร์สำหรับพัฒนา (development server) พร้อม hot reload |
-| `npm run check` | ตรวจสอบโค้ด |
-| `npm run build` | สร้าง build output สำหรับ production ไปยังโฟลเดอร์ `docs/` |
+| Command | Description |
+|----------|-------------|
+| `npm install` | Install dependencies |
+| `npm run dev` | Start Development Server |
+| `npm run check` | Project Validation |
+| `npm run build` | Build Production ไปยัง `docs/` |
 
-หลังรัน `npm run dev` ให้เปิดเบราว์เซอร์ไปที่ URL ที่แสดงใน terminal (เช่น `http://localhost:5173`)
+หลังจากรัน
+
+```bash
+npm run dev
+```
+
+เปิด Browser ไปที่
+
+```
+http://localhost:5173
+```
 
 ---
 
-## GitHub Pages URL
+# 🌐 Live Demo
 
-🔗 Dashboard ที่ deploy แล้ว: [https://kittitatk.github.io/engse203-lab02-68543210019-4/](https://kittitatk.github.io/engse203-lab02-68543210019-4/)
+### GitHub Pages
 
----
-
-## ภาพหน้าจอ (Screenshots)
-
-### Normal State
-
-- <img width="1891" height="962" alt="Screenshot 2026-07-12 1226111" src="https://github.com/user-attachments/assets/59f23a6f-91db-4709-9787-320096c45279" />
-
-> คำอธิบาย: หน้าจอ Dashboard เมื่อโหลดข้อมูลสำเร็จและแสดงผลตามปกติ **สามารถดูได้ : [https://kittitatk.github.io/engse203-lab02-68543210019-4/](https://kittitatk.github.io/engse203-lab02-68543210019-4/) 
-
-### Error State
-
-
-- <img width="1913" height="818" alt="Screenshot 2026-07-12 123244" src="https://github.com/user-attachments/assets/20623c40-ecd0-440f-8817-f99982a6a5cb" />
-
-> คำอธิบาย: หน้าจอ Dashboard เมื่อเกิดข้อผิดพลาด เช่น การดึงข้อมูลล้มเหลว หรือ network error **สามารถดูได้ : [https://kittitatk.github.io/engse203-lab02-68543210019-4/?simulateError=1](https://kittitatk.github.io/engse203-lab02-68543210019-4/?simulateError=1)
+🔗 https://kittitatk.github.io/engse203-lab02-68543210019-4/
 
 ---
 
-## ปัญหาที่พบและวิธีแก้ไข
+# 📸 Screenshots
 
-| ปัญหาที่พบ | สาเหตุ | วิธีแก้ไข |
-|-----------|-------|-----------|
-| `Permission denied (publickey) ตอน git clone หรือ git push` | `ใช้ SSH URL แต่ตั้งค่า SSH key กับ GitHub account ผิด` | `เปลี่ยนไป clone ด้วย HTTPS URL แทน (https://github.com/...) หรือสร้าง SSH key ใหม่แล้วเพิ่มใน GitHub Settings → SSH and GPG keys` |
-| `zsh: permission denied: ./install.sh หรือ script รันไม่ได้` | `ไฟล์ script ไม่มีสิทธิ์ execute` | `รัน chmod +x <ชื่อไฟล์> ก่อน แล้วค่อยรันใหม่` |
+## ✅ Normal State
 
-> เพิ่ม/ลบแถวได้ตามจำนวนปัญหาที่พบจริงระหว่างการพัฒนา
+<img width="1891" height="962" alt="Screenshot 2026-07-12 1226111" src="https://github.com/user-attachments/assets/59f23a6f-91db-4709-9787-320096c45279" />
+
+> Dashboard เมื่อโหลดข้อมูลสำเร็จ
+
+🔗 https://kittitatk.github.io/engse203-lab02-68543210019-4/
+
+---
+
+## ❌ Error State
+
+<img width="1913" height="818" alt="Screenshot 2026-07-12 123244" src="https://github.com/user-attachments/assets/20623c40-ecd0-440f-8817-f99982a6a5cb" />
+
+> Dashboard เมื่อจำลองการเกิด Error
+
+🔗 https://kittitatk.github.io/engse203-lab02-68543210019-4/?simulateError=1
 
 ---
 
-## References & AI Assistance
+# 🛠 Problems & Solutions
 
-### References
--[async-await_and_error-handling.md](https://github.com/se-rmutl/engse203-lab/blob/main/labs/week-02-modern-javascript/docs/async-await_and_error-handling.md)
--[destructuring_array_map_filter_reduce.md](https://github.com/se-rmutl/engse203-lab/blob/main/labs/week-02-modern-javascript/docs/destructuring_array_map_filter_reduce.md)
--[functions_and_invocation.md](https://github.com/se-rmutl/engse203-lab/blob/main/labs/week-02-modern-javascript/docs/functions_and_invocation.md)
--[variable_naming.md](https://github.com/se-rmutl/engse203-lab/blob/main/labs/week-02-modern-javascript/docs/variable_naming.md)
-
-### AI Assistance Disclosure
-
-- **เครื่องมือที่ใช้:** `<Claude>`
-- **ลักษณะการใช้งาน:** `<ช่วยอธิบายแนวคิด ES Modules, ช่วย debug error , ช่วยอธิยายหลักการทำงานของ function ต่างๆว่ามีการเชื่อมโยงกันยังไง , ช่วยร่างโครง README>`
-- **ส่วนที่เขียน/แก้ไขเองโดยผู้เรียน:** `ส่วนที่เป็น scr และ ขั้นตอนการติดตั้ง ตามที่ศึกษาจากเอกสารของ lab week2`
+| Problem | Cause | Solution |
+|---------|-------|----------|
+| GitHub Pages ขึ้น 404 | ไม่ได้ Build ไปที่ docs | เพิ่ม `vite.config.js` และรัน `npm run build` |
+| ใช้งาน Node 22 ไม่ได้ | ไม่ได้ Export PATH ของ NVM | เพิ่มคำสั่ง export ตามที่ NVM แจ้ง |
 
 ---
+
+# 📚 References
+
+- async-await_and_error-handling.md
+- destructuring_array_map_filter_reduce.md
+- functions_and_invocation.md
+- variable_naming.md
+
+---
+
+# 🤖 AI Assistance
+
+| รายการ | รายละเอียด |
+|---------|------------|
+| AI Tool | Gemini , ChatGPT |
+| ใช้ช่วย | อธิบาย ES Modules, Debug Error, อธิบาย Function, ร่าง README |
+| ผู้เรียนทำเอง | Source Code (`src`) และขั้นตอนการติดตั้งจากเอกสาร Lab |
+
+---
+
+# 📄 License
+
+For educational purposes only.
+
+ENGSE203 — Modern JavaScript Lab 02
